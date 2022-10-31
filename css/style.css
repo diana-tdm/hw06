@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+:root {
+  --fistColor: #ffffff;
+  --containerColor: #363a4d;
+  --borderColor: #89c249;
+  --buttonColor: #e58d35;
+  --hoverColor: #b26519;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #ffffff;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: #282b38;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
+  max-width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container > :nth-child(2n-1) {
+  background: var(--containerColor);
+  width: 100%;
+}
+
+header {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 3px solid var(--borderColor);
+}
+
+.main {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main__btn {
+  width: 250px;
+  height: 50px;
+  background: var(--buttonColor);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--fistColor);
+  border: 3px solid var(--hoverColor);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--hoverColor);
+}
+
+.main__signup {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.signup {
+  display: grid;
+  background: var(--containerColor);
+  border-radius: 10px;
+  padding: 30px;
+  gap: 15px;
+  text-align: center;
+  border: 3px solid var(--borderColor);
+}
+
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--buttonColor);
+  font-size: 1.7rem;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 0px 10px;
+}
+
+.result {
+  color: red;
+}
+
+form button {
+  font-weight: 600;
+  background: var(--buttonColor);
+  border: none;
+  border-radius: 5px;
+  color: var(--fistColor);
+  border: 3px solid var(--hoverColor);
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 6px 0px;
+  font-size: 1rem;
+}
