@@ -129,6 +129,18 @@ input {
   color: red;
 }
 
+#login {
+  transition: 0.3s;
+}
+
+.ok {
+  border: 3px solid #89c249;
+}
+
+.error {
+  border: 3px solid red;
+}
+
 form button {
   font-weight: 600;
   background: var(--buttonColor);
@@ -140,4 +152,51 @@ form button {
   transition: 0.3s;
   padding: 6px 0px;
   font-size: 1rem;
+}
+
+.main__chat {
+  display: grid;
+  grid-template-rows: 1fr 80px;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 15px 0px;
+}
+
+.main__chat > div {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+#windowMsg {
+  display: grid;
+  align-content: center;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 20px;
+  background: var(--containerColor);
+  padding: 0px 20px;
+}
+
+#windowMsg input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid gray;
+}
+
+#sendMsg {
+  width: 180px;
+  height: 40px;
+  font-weight: 600;
+  background: var(--buttonColor);
+  border: none;
+  border-radius: 5px;
+  color: var(--fistColor);
+  border: 3px solid var(--hoverColor);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+#sendMsg:hover {
+  background: var(--hoverColor);
 }

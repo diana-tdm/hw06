@@ -53,21 +53,29 @@ if(isset($_POST['send'])){
     <script>
 
         login.oninput = ()=>{
+            login.classList.remove("error","ok");
             if(login.value.length<3){
-                login.style.border = "3px solid red";
-                resultSearchLogin.innerHTML = " ";          
+                login.classList.add("error");
+                resultSearchLogin.innerHTML = " ";               
             }
             else{
-                login.style.border = "3px solid #89c249";
+                login.classList.add("ok");
                 $.ajax({
                     url:"/system/searchLogin.php",
                     type:"post",
                     data:{
                         "login":login.value
                     },
-                    success: data =>{
-                        resultSearchLogin.innerHTML = data;
-                    }
+                    success: data =>{    
+                        login.classList.remove("error","ok");
+                        if(data.length>1){
+                            login.classList.add("error");
+                        }
+                        else{
+                            login.classList.add("ok");
+                        }          
+                        resultSearchLogin.innerHTML = data;                        
+                    }                    
                 })
                 
             }
