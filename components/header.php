@@ -1,3 +1,3 @@
         <header>
-            <a href="/index.php">MyChat</a>            
+            <a href="/index.php">MyChat</a>               
         </header>
